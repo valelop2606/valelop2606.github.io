@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Valeria López · Backend Developer</title>
+  <meta name="description" content="Backend developer (Node.js, Express, NestJS, TypeScript, PostgreSQL). REST APIs, integrations and full-stack MVPs that are tested, documented and deployed." />
+  <meta property="og:title" content="Valeria López · Backend Developer" />
+  <meta property="og:description" content="REST APIs, integrations and full-stack MVPs: tested, documented and deployed." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0c0d0f" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Apply saved theme/lang before paint to avoid a flash
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.dataset.theme = t;
+      var l = localStorage.getItem('lang') || ((navigator.language || '').startsWith('es') ? 'es' : 'en');
+      document.documentElement.lang = l;
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="brand" href="#top" aria-label="Valeria López, home">
+        <span class="brand__mark" aria-hidden="true">VL</span>
+        <span class="brand__name">Valeria López</span>
+      </a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="chip" id="langToggle" type="button" aria-label="Cambiar idioma / Change language">ES</button>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero__copy">
+        <p class="pill"><span class="pill__dot" aria-hidden="true"></span><span data-i18n="hero.available">Available for freelance projects</span></p>
+        <h1 class="hero__title" data-i18n="hero.title">Backend developer building APIs that don't break.</h1>
+        <p class="hero__lead" data-i18n="hero.lead">I'm Valeria, a backend developer from La Paz, Bolivia. I build REST APIs, integrations and full-stack MVPs with Node.js, TypeScript and PostgreSQL: tested, documented and deployed.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="#projects" data-i18n="hero.cta1">View projects</a>
+          <a class="btn btn--ghost" id="cvLinkHero" href="assets/CV_Valeria_Lopez_EN.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+            <span data-i18n="hero.cta2">Download CV</span>
+          </a>
+        </div>
+        <ul class="hero__meta">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span data-i18n="hero.loc">La Paz, Bolivia · Remote (UTC−4)</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18M3 12h18M3 19h12"/></svg><span data-i18n="hero.langs">Spanish · English (B2)</span></li>
+        </ul>
+      </div>
+
+      <figure class="terminal" aria-label="Terminal showing the Wallet API test suite passing">
+        <div class="terminal__bar"><span></span><span></span><span></span><em>wallet/backend</em></div>
+<pre class="terminal__body"><code><span class="t-mute">$</span> npm test
+<span class="t-ok">▶</span> auth <span class="t-mute">(4)</span>
+<span class="t-ok">▶</span> transactions <span class="t-mute">(6)</span>
+<span class="t-ok">▶</span> frontend payload compatibility <span class="t-mute">(1)</span>
+<span class="t-ok">▶</span> atomicity
+  <span class="t-ok">✔</span> rolls back the debit when depositing
+    into a saving that does not exist
+  <span class="t-ok">✔</span> rolls back the void when the destination
+    no longer has the money
+<span class="t-ok">▶</span> platform <span class="t-mute">(3)</span>
+
+<span class="t-mute">#</span> tests 22
+<span class="t-mute">#</span> <span class="t-ok">pass 22</span>
+<span class="t-mute">#</span> fail 0<span class="caret" aria-hidden="true"></span></code></pre>
+      </figure>
+    </section>
+
+    <!-- STACK STRIP -->
+    <section class="strip" aria-label="Main stack">
+      <div class="container strip__inner">
+        <span>Node.js</span><span>Express</span><span>NestJS</span><span>TypeScript</span><span>PostgreSQL</span><span>MongoDB</span><span>React</span><span>GitHub Actions</span><span>Docker</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section container" id="projects">
+      <header class="section__head">
+        <p class="eyebrow" data-i18n="projects.eyebrow">Selected work</p>
+        <h2 data-i18n="projects.title">Projects</h2>
+        <p class="section__lead" data-i18n="projects.lead">Real code you can read, run and try. Each project links to its repository and, where available, a live deploy or demo video.</p>
+      </header>
+      <div class="projects" id="projectList"><!-- rendered by main.js --></div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section container" id="services">
+      <header class="section__head">
+        <p class="eyebrow" data-i18n="services.eyebrow">How I can help</p>
+        <h2 data-i18n="services.title">Services</h2>
+      </header>
+      <div class="services">
+        <article class="service">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"/><path d="m16 15 2 2 4-4"/></svg>
+          <h3 data-i18n="s1.t">REST APIs</h3>
+          <p data-i18n="s1.d">Express or NestJS APIs with auth, validation, roles, OpenAPI docs and tests, ready for your frontend or mobile app.</p>
+        </article>
+        <article class="service">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+          <h3 data-i18n="s2.t">Integrations & automations</h3>
+          <p data-i18n="s2.d">Connect your app to payment providers, webhooks, email, messaging or AI models, with retries and idempotency.</p>
+        </article>
+        <article class="service">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8.5 11h5M11 8.5v5"/></svg>
+          <h3 data-i18n="s3.t">Bug fixing & code audits</h3>
+          <p data-i18n="s3.d">I find and fix bugs in existing backends (security, N+1 queries, race conditions, missing transactions) and document every issue.</p>
+        </article>
+        <article class="service">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg>
+          <h3 data-i18n="s4.t">Full-stack MVPs</h3>
+          <p data-i18n="s4.d">From database schema to a React UI, deployed on Vercel, Render or Neon with CI/CD from day one.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT / CV -->
+    <section class="section container" id="about">
+      <header class="section__head">
+        <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+        <h2 data-i18n="about.title">A bit about me</h2>
+      </header>
+      <div class="about">
+        <div class="about__bio">
+          <p data-i18n="about.p1">I'm a Systems Engineering student at Universidad Privada Boliviana, and I focus on backend development. I like problems where correctness matters: money that has to add up, data that has to stay in sync, APIs other people rely on.</p>
+          <p data-i18n="about.p2">I care about the boring parts that make software trustworthy: transactions, validation, tests, clear docs and a CI pipeline that catches mistakes before users do. I communicate clearly, I'm used to agile teamwork, and I work in Spanish or English.</p>
+          <div class="cv-links">
+            <a class="btn btn--ghost" href="assets/CV_Valeria_Lopez_EN.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>CV · English
+            </a>
+            <a class="btn btn--ghost" href="assets/CV_Valeria_Lopez_ES.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>CV · Español
+            </a>
+          </div>
+
+          <div class="now">
+            <p class="now__label" data-i18n="now.label">Now</p>
+            <ul>
+              <li data-i18n="now.1">Improving RepoLens: GitHub URL analysis and a live demo.</li>
+              <li data-i18n="now.2">Building a payments + webhooks integration service (Stripe / MercadoPago).</li>
+              <li data-i18n="now.3">Learning FastAPI to take on Python automation work.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about__side">
+          <h3 class="side__title" data-i18n="tl.title">Timeline</h3>
+          <ol class="timeline">
+            <li>
+              <span class="timeline__date">2024 – 2028</span>
+              <strong data-i18n="tl.1t">B.Sc. Computer Systems Engineering</strong>
+              <span>Universidad Privada Boliviana (UPB)</span>
+            </li>
+            <li>
+              <span class="timeline__date" data-i18n="tl.2d">Hackathon</span>
+              <strong data-i18n="tl.2t">Código Facilito hackathon</strong>
+              <span data-i18n="tl.2s">Built RepoLens with a team: NestJS, React and AWS Bedrock.</span>
+            </li>
+            <li>
+              <span class="timeline__date">2023</span>
+              <strong data-i18n="tl.3t">Technical Diploma in Computer Science</strong>
+              <span>Colegio Santa Teresa</span>
+            </li>
+            <li>
+              <span class="timeline__date">2019 – 2022</span>
+              <strong data-i18n="tl.4t">Model UN delegate</strong>
+              <span>SIPPMUN 2019 · MCC 2022</span>
+            </li>
+          </ol>
+
+          <h3 class="side__title" data-i18n="sk.title">Skills</h3>
+          <dl class="skills">
+            <div><dt>Backend</dt><dd>Node.js · Express · NestJS · TypeScript · REST · JWT · zod · OpenAPI</dd></div>
+            <div><dt data-i18n="sk.data">Data</dt><dd>PostgreSQL · SQL · MongoDB · transactions · migrations</dd></div>
+            <div><dt>Frontend</dt><dd>React · Vite · Tailwind CSS</dd></div>
+            <div><dt data-i18n="sk.ops">Testing & DevOps</dt><dd>Vitest · Jest · supertest · GitHub Actions · Docker · Vercel · Render · Neon</dd></div>
+            <div><dt data-i18n="sk.also">Also</dt><dd>Python · Java · Kotlin · PHP</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section container" id="contact">
+      <div class="contact">
+        <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+        <h2 class="contact__title" data-i18n="contact.title">Have a project in mind?</h2>
+        <p class="contact__lead" data-i18n="contact.lead">Tell me what you need: an API, an integration, a bug that won't go away. I usually reply within 24 hours.</p>
+        <div class="contact__actions">
+          <button class="btn btn--primary copy" type="button" id="copyEmail" data-email="valeriuslopezpinto@gmail.com">
+            <span class="copy__label">valeriuslopezpinto@gmail.com</span>
+            <span class="copy__done" aria-hidden="true" data-i18n="contact.copied">Copied!</span>
+          </button>
+          <a class="btn btn--ghost" href="https://linkedin.com/in/valerialopez2606" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>LinkedIn
+          </a>
+          <a class="btn btn--ghost" href="https://github.com/valelop2606" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>GitHub
+          </a>
+        </div>
+        <p class="sr-only" aria-live="polite" id="copyStatus"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Valeria López</span>
+      <span data-i18n="footer.built">Hand-built with HTML, CSS and a little JavaScript.</span>
+    </div>
+  </footer>
+
+  <!-- Demo video / image viewer -->
+  <dialog class="viewer" id="viewer" aria-label="Project media">
+    <button class="viewer__close icon-btn" type="button" id="viewerClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div class="viewer__body" id="viewerBody"></div>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
