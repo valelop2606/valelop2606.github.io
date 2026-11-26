@@ -31,7 +31,7 @@
     const m = p.media;
     if (m && m.type === 'image') {
       return `<button class="media media--img" type="button" data-view="${p.id}" aria-label="${esc(m.alt)}: ${t('p.video') === 'Ver demo' ? 'ampliar' : 'enlarge'}">
-        <img src="${esc(m.src)}" alt="${esc(m.alt)}" loading="lazy" decoding="async"
+        <img src="${esc(m.src)}" alt="${esc(m.alt)}" decoding="async"
           onerror="this.closest('.media').outerHTML = window.__codeFallback('${p.id}')" />
         <span class="media__hint">${icon('expand')}</span></button>`;
     }
