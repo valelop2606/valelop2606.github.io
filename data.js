@@ -32,7 +32,7 @@ window.PROJECTS = [
     repo: 'https://github.com/valelop2606/Wallet',
     live: 'https://wallet-frontend-lake.vercel.app',
     docs: 'https://wallet-backend-rwj5.onrender.com/api/docs',
-    video: null, // e.g. 'assets/wallet-demo.mp4' or { type: 'youtube', id: '...' }
+    video: 'assets/wallet-demo.mp4',
     media: { type: 'image', src: 'assets/wallet-dashboard.png', alt: 'Wallet dashboard' },
     code: {
       file: 'database/connection.ts',
