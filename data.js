@@ -54,30 +54,32 @@ window.PROJECTS = [
   {
     id: 'repolens',
     title: 'RepoLens',
-    badge: { en: 'Hackathon', es: 'Hackathon' },
-    badgeTone: 'accent',
+    badge: { en: 'Live', es: 'En vivo' },
+    badgeTone: 'live',
     summary: {
-      en: 'Upload a repository and get an interactive knowledge base, auto-generated docs and an AI assistant that answers questions about the code.',
-      es: 'Sube un repositorio y obtén una base de conocimiento interactiva, documentación generada y un asistente de IA que responde preguntas sobre el código.',
+      en: 'Upload a repository as a .zip and get an interactive knowledge base: detected stack, modules, endpoints and entities, auto-generated docs, a learning path and an AI assistant that answers questions about the code.',
+      es: 'Sube un repositorio en .zip y obtén una base de conocimiento interactiva: stack detectado, módulos, endpoints y entidades, documentación generada, una ruta de aprendizaje y un asistente de IA que responde preguntas sobre el código.',
     },
     highlights: {
       en: [
         'Pluggable static-analysis pipeline: technologies, modules, endpoints, components, entities',
-        'LLM assistant grounded on the knowledge base (Claude via AWS Bedrock), with chat history',
+        'AI assistant grounded on the knowledge base, behind a swappable LlmClient interface (Gemini today), with chat history',
         'Property-based tests with fast-check, and specs written before code',
+        'Live on free tiers, no cloud lock-in: Render (API + frontend) and MongoDB Atlas',
       ],
       es: [
         'Pipeline de análisis estático modular: tecnologías, módulos, endpoints, componentes, entidades',
-        'Asistente con LLM sobre la base de conocimiento (Claude vía AWS Bedrock), con historial',
+        'Asistente de IA sobre la base de conocimiento, detrás de una interfaz LlmClient intercambiable (hoy Gemini), con historial',
         'Tests basados en propiedades con fast-check y especificaciones antes del código',
+        'En vivo con planes gratuitos, sin depender de un proveedor cloud: Render (API + frontend) y MongoDB Atlas',
       ],
     },
-    tags: ['NestJS', 'TypeScript', 'MongoDB', 'React', 'AWS S3', 'AWS Bedrock'],
+    tags: ['NestJS', 'TypeScript', 'MongoDB', 'React', 'Gemini', 'Render'],
     repo: 'https://github.com/valelop2606/repolens',
-    live: null,
+    live: 'https://repolens-web-nqo7.onrender.com',
     docs: null,
     video: null,
-    media: null,
+    media: { type: 'image', src: 'assets/repolens-explorer.png', alt: 'RepoLens explorer listing the 43 endpoints detected in the Wallet API' },
     code: {
       file: 'pipeline',
       lines: [
@@ -90,7 +92,7 @@ window.PROJECTS = [
         ['p', '      │\n'],
         ['p', '      ├── '], ['s', 'GET  /sessions/:id/docs/*'], ['p', '\n'],
         ['p', '      └── '], ['s', 'POST /sessions/:id/chat/ask'], ['p', '\n'],
-        ['m', '                     ↳ Claude (Bedrock)'],
+        ['m', '                     ↳ Gemini (LlmClient)'],
       ],
     },
   },
@@ -106,11 +108,13 @@ window.PROJECTS = [
     highlights: {
       en: [
         'Route shadowing, wrong HTTP codes, security gaps, N+1 queries and missing transactions',
-        'One write-up per bug: symptom, root cause, reproduction steps and fix',
+        'One write-up per bug: detection with file and line, impact and severity (P0–P2), fix and a curl + Newman reproduction',
+        'Prioritized index: 8 critical (P0) bugs, including routes that never resolve and a JWT secret that could be empty',
       ],
       es: [
         'Rutas sombreadas, códigos HTTP incorrectos, huecos de seguridad, consultas N+1 y transacciones faltantes',
-        'Un informe por bug: síntoma, causa raíz, pasos para reproducirlo y solución',
+        'Un informe por bug: detección con archivo y línea, impacto y severidad (P0–P2), solución y reproducción con curl + Newman',
+        'Índice priorizado: 8 bugs críticos (P0), entre ellos rutas que nunca se alcanzan y un secreto JWT que podía quedar vacío',
       ],
     },
     tags: ['NestJS', 'MongoDB', 'Swagger', 'Docker', 'QA'],
@@ -118,7 +122,7 @@ window.PROJECTS = [
     live: null,
     docs: null,
     video: null,
-    media: null,
+    media: { type: 'image', src: 'assets/audit-report.png', alt: 'Bug report 03: /users/me shadowed by /users/:id' },
     code: {
       file: 'bugs-backend/error-03.md',
       lines: [
@@ -154,7 +158,7 @@ window.I18N = {
     'about.p1': 'I’m a Systems Engineering student at Universidad Privada Boliviana, and I focus on backend development. I like problems where correctness matters: money that has to add up, data that has to stay in sync, APIs other people rely on.',
     'about.p2': 'I care about the boring parts that make software trustworthy: transactions, validation, tests, clear docs and a CI pipeline that catches mistakes before users do. I communicate clearly, I’m used to agile teamwork, and I work in Spanish or English.',
     'now.label': 'Now',
-    'now.1': 'Improving RepoLens: analysis from a GitHub URL and a live demo.',
+    'now.1': 'Improving RepoLens: analysis from a GitHub URL and monorepo support.',
     'now.2': 'Next: a payments + webhooks integration service (Stripe / MercadoPago).',
     'now.3': 'Learning FastAPI to take on Python automation work.',
     'tl.title': 'Timeline', 'tl.1t': 'B.Sc. Computer Systems Engineering', 'tl.2d': 'Hackathon',
@@ -186,7 +190,7 @@ window.I18N = {
     'about.p1': 'Estudio Ingeniería de Sistemas en la Universidad Privada Boliviana y me enfoco en backend. Me gustan los problemas donde la exactitud importa: dinero que tiene que cuadrar, datos que deben mantenerse sincronizados, APIs de las que otros dependen.',
     'about.p2': 'Cuido las partes “aburridas” que hacen confiable al software: transacciones, validación, tests, documentación clara y un pipeline de CI que atrapa errores antes que los usuarios. Me comunico con claridad, tengo experiencia en equipos ágiles y trabajo en español o inglés.',
     'now.label': 'Ahora',
-    'now.1': 'Mejorando RepoLens: análisis desde una URL de GitHub y demo en vivo.',
+    'now.1': 'Mejorando RepoLens: análisis desde una URL de GitHub y soporte para monorepos.',
     'now.2': 'Próximo: un servicio de integración de pagos y webhooks (Stripe / MercadoPago).',
     'now.3': 'Aprendiendo FastAPI para tomar trabajos de automatización en Python.',
     'tl.title': 'Trayectoria', 'tl.1t': 'Ing. de Sistemas Computacionales', 'tl.2d': 'Hackathon',
