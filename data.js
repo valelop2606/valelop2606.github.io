@@ -32,8 +32,8 @@ window.PROJECTS = [
     repo: 'https://github.com/valelop2606/Wallet',
     live: 'https://wallet-frontend-lake.vercel.app',
     docs: 'https://wallet-backend-rwj5.onrender.com/api/docs',
-    video: 'assets/wallet-demo.mp4',
-    media: { type: 'image', src: 'assets/wallet-dashboard.png', alt: 'Wallet dashboard' },
+    video: 'assets/wallet-demo.mp4?v=5',
+    media: { type: 'image', src: 'assets/wallet-dashboard.png?v=5', alt: 'Wallet dashboard' },
     code: {
       file: 'database/connection.ts',
       lines: [
@@ -79,7 +79,7 @@ window.PROJECTS = [
     live: 'https://repolens-web-nqo7.onrender.com',
     docs: null,
     video: null,
-    media: { type: 'image', src: 'assets/repolens-explorer.png', alt: 'RepoLens explorer listing the 43 endpoints detected in the Wallet API' },
+    media: { type: 'image', src: 'assets/repolens-explorer.png?v=5', alt: 'RepoLens explorer listing the 43 endpoints detected in the Wallet API' },
     code: {
       file: 'pipeline',
       lines: [
