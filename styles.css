@@ -244,7 +244,10 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .timeline li::before { content: ''; position: absolute; left: -22px; top: 7px; width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); }
 .timeline__date { font-family: var(--mono); font-size: 12.5px; color: var(--ink-3); }
 .timeline strong { font-weight: 600; }
-.timeline li > span:last-child { font-size: 14.5px; color: var(--ink-2); }
+.timeline li > span:last-child,
+.timeline li > span + span { font-size: 14.5px; color: var(--ink-2); }
+.timeline__link { font-size: 14px; color: var(--accent); width: fit-content; }
+.timeline__link:hover { text-decoration: underline; }
 .skills { display: grid; gap: 0; margin: 0; border-top: 1px solid var(--line); }
 .skills div { display: grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
 .skills dt { font-weight: 600; font-size: 14.5px; }
